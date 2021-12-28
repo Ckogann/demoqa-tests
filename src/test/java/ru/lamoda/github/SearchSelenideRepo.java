@@ -18,7 +18,11 @@ public class SearchSelenideRepo {
     void shouldSelenideRepositoryInGithub() {
         open("https://github.com/");
         $("[data-test-selector=nav-search-input]").setValue("selenide").pressEnter();
+
+        // находит все элементы li в коллекции ul с классом repo-list,
+        // затем выбирает первый li и кликает по элементу a, который находится внутри первого li
         $$("ul.repo-list li").first().$("a").click();
+
         $("h1").shouldHave(text("selenide / selenide"));
     }
 }

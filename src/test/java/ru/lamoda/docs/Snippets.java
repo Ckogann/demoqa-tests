@@ -52,9 +52,9 @@ public class Snippets {
     $(byText("full text")).click();
     $(withText("ull tex")).click();
 
-    $("").parent();
-    $("").sibling(1);
-    $("").preceding(1);
+    $("").parent(); // переход к родителю из вложенного в него элемента
+    $("").sibling(0); // следующий элемент на том же уровне вложенности, при значении 1 - второй следующий...
+    $("").preceding(0); // предыдущий элемент на том же уровне вложенности, при значении 1 - второй предыдущий...
     $("").closest("div");
     $("").ancestor("div"); // the same as closest
     $("div:last-child");
